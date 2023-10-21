@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 110%;
+  font-weight: 700;
+  color: #000201;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F1F1F1;
+  text-transform: lowercase;
+  color: #000201;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 128px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+}
+.header .logo img {
+  max-height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 54px;
+}
+.menu__link {
+  color: #33333350;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 110%;
+  position: relative;
+}
+.menu__link.active {
+  color: #333333;
+}
+.menu__link.active:after, .menu__link.active:hover:after {
+  width: 100%;
+  background-color: #333333;
+}
+.menu__link:hover:after {
+  width: 100%;
+  background-color: #33333350;
+  transition: width 0.3s;
+}
+.menu__link:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #333;
+}
+
+.about {
+  padding: 48px 0;
+}
+.about__info {
+  display: flex;
+  align-items: center;
+}
+.about__img {
+  max-width: 400px;
+}
+.about__text {
+  color: #959390;
+  font-size: 20px;
+  line-height: 110%;
+}
+.about__resume-item {
+  display: flex;
+  gap: 48px;
+}
+.about__resume-year {
+  flex-basis: 110px;
+  padding-top: 4px;
+}
+.about__resume-year, .about__resume-company {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+}
+.about__resume-position {
+  color: #959390;
+  font-size: 16px;
+  line-height: 110%;
+}
+.about__resume-info {
+  position: relative;
+  padding-bottom: 24px;
+  padding-top: 4px;
+}
+.about__resume-info:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #33333350;
+  top: 0;
+  left: -26px;
+  position: absolute;
+}
+.about__resume-info:after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  top: 6px;
+  left: -35.5px;
+  background: #F1F1F1;
+  border: 1px solid #33333350;
+}
+
+.skills {
+  padding: 48px 0;
+}
+.skills__list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 36px;
+  margin-top: 50px;
+}
+.skills__item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.skills__name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.works {
+  padding: 48px 0;
+}
+.works__tab-list {
+  position: relative;
+  margin: 32px 0;
+}
+.works__tab-list::after {
+  content: "";
+  bottom: -8.5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #33333350;
+}
+.works__tab-btn {
+  position: relative;
+  color: #959390;
+}
+.works__tab-btn + .works__tab-btn {
+  margin-left: 12px;
+}
+.works__tab-btn.active {
+  color: #000201;
+}
+.works__tab-btn.active::after {
+  content: "";
+  bottom: -7px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 1px;
+  background-color: #000201;
+}
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 20px;
+}
+.works__list-item {
+  position: relative;
+  width: calc(25% - 15px);
+  max-width: 400px;
+  max-height: 246px;
+  border-radius: 16px;
+}
+.works__list-item img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 246px;
+  border-radius: 16px;
+}
+.works__item-link span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: -0.25px;
+  transition: opacity 0.3s all;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.works__item-link:hover span {
+  opacity: 1;
+}
+.works__item-link i {
+  margin-right: 8px;
+}
+.works__item-link i::after {
+  content: url("../images/icons/link.svg");
+}
+
+/*# sourceMappingURL=style.css.map */
