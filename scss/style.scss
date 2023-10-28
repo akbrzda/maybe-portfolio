@@ -54,7 +54,7 @@ body {
 .menu {
   display: flex;
   gap: 54px;
-  &__link {
+  .menu__link {
     color: $link;
     text-decoration: none;
     font-size: 20px;
@@ -86,40 +86,40 @@ body {
   }
 }
 .about {
-  padding: 48px 0;
-  &__info {
+  padding: 96px 0;
+  .about__info {
     display: flex;
     align-items: center;
   }
-  &__img {
+  .about__img {
     max-width: 400px;
   }
-  &__text {
+  .about__text {
     color: $secondary;
     font-size: 20px;
     line-height: 110%;
   }
-  &__resume {
-    &-item {
+  .about__resume {
+    .about__resume -item {
       display: flex;
       gap: 48px;
     }
-    &-year {
+    .about__resume -year {
       flex-basis: 110px;
       padding-top: 4px;
     }
-    &-year,
-    &-company {
+    .about__resume -year,
+    .about__resume -company {
       font-weight: 600;
       font-size: 20px;
       line-height: 110%;
     }
-    &-position {
+    .about__resume-position {
       color: $secondary;
       font-size: 16px;
       line-height: 110%;
     }
-    &-info {
+    .about__resume-info {
       position: relative;
       padding-bottom: 24px;
       padding-top: 4px;
@@ -147,19 +147,19 @@ body {
   }
 }
 .skills {
-  padding: 48px 0;
-  &__list {
+  padding: 96px 0;
+  .skills__list {
     display: grid;
     grid-template-columns: auto auto;
     grid-row-gap: 36px;
     margin-top: 50px;
   }
-  &__item {
+  .skills__item {
     display: flex;
     align-items: center;
     gap: 36px;
   }
-  &__name {
+  .skills__name {
     font-size: 20px;
     font-weight: 600;
     line-height: 110%;
@@ -167,8 +167,8 @@ body {
 }
 
 .works {
-  padding: 48px 0;
-  &__tab-list {
+  padding: 96px 0;
+  .works__tab-list {
     position: relative;
     margin: 32px 0;
     &::after {
@@ -181,7 +181,7 @@ body {
       background-color: $link;
     }
   }
-  &__tab-btn {
+  .works__tab-btn {
     position: relative;
     color: $secondary;
     & + & {
@@ -201,7 +201,7 @@ body {
       }
     }
   }
-  &__list {
+  .works__list {
     display: flex;
     flex-wrap: wrap;
     gap: 22px 20px;
@@ -220,31 +220,138 @@ body {
       }
     }
   }
-  &__item-link span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  .works__item-link {
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      color: #fff;
+      font-size: 20px;
+      letter-spacing: -0.25px;
+      transition: opacity 0.3s;
+      border-radius: 16px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    &:hover span {
+      opacity: 1;
+    }
+    i {
+      margin-right: 8px;
+      &::after {
+        content: url("../images/icons/link.svg");
+      }
+    }
+  }
+}
+.contacts {
+  padding: 96px 0;
+  .contacts__inner {
+    display: flex;
+    gap: 96px;
+  }
+  .contact-form {
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px 32px;
+    margin-top: 32px;
+    .form-group input {
+      width: 100%;
+      height: 40px;
+      padding: 0 32px;
+      border-radius: 16px;
+      border: 1px solid $link;
+    }
+    .form-group textarea {
+      width: 100%;
+      padding: 0 32px;
+      border-radius: 16px;
+      border: 1px solid $link;
+      resize: none;
+      padding: 10px 32px;
+      height: 200px;
+    }
+    .form-group:nth-child(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    input[type="submit"] {
+      padding: 10px 48px;
+      border-radius: 16px;
+      border: 1px solid $primary;
+      width: 156px;
+      text-transform: lowercase;
+      grid-column-start: 2;
+      float: right;
+      cursor: pointer;
+      color: $primary;
+      transition: background-color 0.3s;
+      &:hover,
+      &:focus {
+        background-color: $primary;
+        color: #fff;
+      }
+    }
+    *::placeholder {
+      color: $link;
+    }
+  }
+  .contacts__list {
+    .contacts__list-item {
+      display: flex;
+      align-items: center;
+      & + & {
+        margin-top: 8px;
+      }
+      .contacts__item-icon {
+        margin-right: 12px;
+        &.github::before {
+          content: url(../images/icons/github.svg);
+        }
+        &.telegram::before {
+          content: url(../images/icons/telegram.svg);
+        }
+        &.location::before {
+          content: url(../images/icons/location.svg);
+        }
+      }
+      .contacts__item-link {
+        color: $linkActive;
+        font-size: 20px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.footer {
+  .container {
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .designed {
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    color: #fff;
+    color: $secondary;
     font-size: 20px;
-    letter-spacing: -0.25px;
-    transition: opacity 0.3s all;
-    border-radius: 16px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  &__item-link:hover span {
-    opacity: 1;
-  }
-  &__item-link i {
-    margin-right: 8px;
-    &::after {
-      content: url("../images/icons/link.svg");
+    line-height: 110%;
+    &:after {
+      content: url(../images/icons/heart.svg);
+      margin-left: 4px;
     }
+  }
+  .copyright {
+    text-transform: none;
+    color: $secondary;
+    font-size: 20px;
+    line-height: 110%;
   }
 }

@@ -9,6 +9,7 @@
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 article,
@@ -94,26 +95,26 @@ body {
   display: flex;
   gap: 54px;
 }
-.menu__link {
+.menu .menu__link {
   color: #33333350;
   text-decoration: none;
   font-size: 20px;
   line-height: 110%;
   position: relative;
 }
-.menu__link.active {
+.menu .menu__link.active {
   color: #333333;
 }
-.menu__link.active:after, .menu__link.active:hover:after {
+.menu .menu__link.active:after, .menu .menu__link.active:hover:after {
   width: 100%;
   background-color: #333333;
 }
-.menu__link:hover:after {
+.menu .menu__link:hover:after {
   width: 100%;
   background-color: #33333350;
   transition: width 0.3s;
 }
-.menu__link:after {
+.menu .menu__link:after {
   content: "";
   position: absolute;
   display: block;
@@ -125,44 +126,45 @@ body {
 }
 
 .about {
-  padding: 48px 0;
+  padding: 96px 0;
 }
-.about__info {
+.about .about__info {
   display: flex;
   align-items: center;
 }
-.about__img {
+.about .about__img {
   max-width: 400px;
 }
-.about__text {
+.about .about__text {
   color: #959390;
   font-size: 20px;
   line-height: 110%;
 }
-.about__resume-item {
+.about .about__resume .about__resume -item {
   display: flex;
   gap: 48px;
 }
-.about__resume-year {
+.about .about__resume .about__resume -year {
   flex-basis: 110px;
   padding-top: 4px;
 }
-.about__resume-year, .about__resume-company {
+.about .about__resume .about__resume -year,
+.about .about__resume .about__resume -company {
   font-weight: 600;
   font-size: 20px;
   line-height: 110%;
 }
-.about__resume-position {
+.about .about__resume .about__resume-position {
   color: #959390;
   font-size: 16px;
   line-height: 110%;
 }
-.about__resume-info {
+.about .about__resume .about__resume-info {
   position: relative;
   padding-bottom: 24px;
   padding-top: 4px;
 }
-.about__resume-info:before {
+.about .about__resume .about__resume-info:before {
   content: "";
   width: 1px;
   height: 100%;
@@ -171,7 +173,7 @@ body {
   left: -26px;
   position: absolute;
 }
-.about__resume-info:after {
+.about .about__resume .about__resume-info:after {
   position: absolute;
   content: "";
   width: 18px;
@@ -184,33 +186,33 @@ body {
 }
 
 .skills {
-  padding: 48px 0;
+  padding: 96px 0;
 }
-.skills__list {
+.skills .skills__list {
   display: grid;
   grid-template-columns: auto auto;
   grid-row-gap: 36px;
   margin-top: 50px;
 }
-.skills__item {
+.skills .skills__item {
   display: flex;
   align-items: center;
   gap: 36px;
 }
-.skills__name {
+.skills .skills__name {
   font-size: 20px;
   font-weight: 600;
   line-height: 110%;
 }
 
 .works {
-  padding: 48px 0;
+  padding: 96px 0;
 }
-.works__tab-list {
+.works .works__tab-list {
   position: relative;
   margin: 32px 0;
 }
-.works__tab-list::after {
+.works .works__tab-list::after {
   content: "";
   bottom: -8.5px;
   left: 0;
@@ -219,17 +221,17 @@ body {
   height: 1px;
   background-color: #33333350;
 }
-.works__tab-btn {
+.works .works__tab-btn {
   position: relative;
   color: #959390;
 }
-.works__tab-btn + .works__tab-btn {
+.works .works__tab-btn + .works .works__tab-btn {
   margin-left: 12px;
 }
-.works__tab-btn.active {
+.works .works__tab-btn.active {
   color: #000201;
 }
-.works__tab-btn.active::after {
+.works .works__tab-btn.active::after {
   content: "";
   bottom: -7px;
   left: 0;
@@ -239,25 +241,25 @@ body {
   height: 1px;
   background-color: #000201;
 }
-.works__list {
+.works .works__list {
   display: flex;
   flex-wrap: wrap;
   gap: 22px 20px;
 }
-.works__list-item {
+.works .works__list-item {
   position: relative;
   width: calc(25% - 15px);
   max-width: 400px;
   max-height: 246px;
   border-radius: 16px;
 }
-.works__list-item img {
+.works .works__list-item img {
   width: 100%;
   max-width: 400px;
   max-height: 246px;
   border-radius: 16px;
 }
-.works__item-link span {
+.works .works__item-link span {
   position: absolute;
   left: 0;
   top: 0;
@@ -271,18 +273,120 @@ body {
   color: #fff;
   font-size: 20px;
   letter-spacing: -0.25px;
-  transition: opacity 0.3s all;
+  transition: opacity 0.3s;
   border-radius: 16px;
   background-color: rgba(0, 0, 0, 0.7);
 }
-.works__item-link:hover span {
+.works .works__item-link:hover span {
   opacity: 1;
 }
-.works__item-link i {
+.works .works__item-link i {
   margin-right: 8px;
 }
-.works__item-link i::after {
+.works .works__item-link i::after {
   content: url("../images/icons/link.svg");
+}
+
+.contacts {
+  padding: 96px 0;
+}
+.contacts .contacts__inner {
+  display: flex;
+  gap: 96px;
+}
+.contacts .contact-form {
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px 32px;
+  margin-top: 32px;
+}
+.contacts .contact-form .form-group input {
+  width: 100%;
+  height: 40px;
+  padding: 0 32px;
+  border-radius: 16px;
+  border: 1px solid #33333350;
+}
+.contacts .contact-form .form-group textarea {
+  width: 100%;
+  padding: 0 32px;
+  border-radius: 16px;
+  border: 1px solid #33333350;
+  resize: none;
+  padding: 10px 32px;
+  height: 200px;
+}
+.contacts .contact-form .form-group:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.contacts .contact-form input[type=submit] {
+  padding: 10px 48px;
+  border-radius: 16px;
+  border: 1px solid #000201;
+  width: 156px;
+  text-transform: lowercase;
+  grid-column-start: 2;
+  float: right;
+  cursor: pointer;
+  color: #000201;
+  transition: background-color 0.3s;
+}
+.contacts .contact-form input[type=submit]:hover, .contacts .contact-form input[type=submit]:focus {
+  background-color: #000201;
+  color: #fff;
+}
+.contacts .contact-form *::placeholder {
+  color: #33333350;
+}
+.contacts .contacts__list .contacts__list-item {
+  display: flex;
+  align-items: center;
+}
+.contacts .contacts__list .contacts__list-item + .contacts .contacts__list .contacts__list-item {
+  margin-top: 8px;
+}
+.contacts .contacts__list .contacts__list-item .contacts__item-icon {
+  margin-right: 12px;
+}
+.contacts .contacts__list .contacts__list-item .contacts__item-icon.github::before {
+  content: url(../images/icons/github.svg);
+}
+.contacts .contacts__list .contacts__list-item .contacts__item-icon.telegram::before {
+  content: url(../images/icons/telegram.svg);
+}
+.contacts .contacts__list .contacts__list-item .contacts__item-icon.location::before {
+  content: url(../images/icons/location.svg);
+}
+.contacts .contacts__list .contacts__list-item .contacts__item-link {
+  color: #333333;
+  font-size: 20px;
+  line-height: 110%;
+}
+
+.footer .container {
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .designed {
+  display: flex;
+  align-items: center;
+  color: #959390;
+  font-size: 20px;
+  line-height: 110%;
+}
+.footer .designed:after {
+  content: url(../images/icons/heart.svg);
+  margin-left: 4px;
+}
+.footer .copyright {
+  text-transform: none;
+  color: #959390;
+  font-size: 20px;
+  line-height: 110%;
 }
 
 /*# sourceMappingURL=style.css.map */
