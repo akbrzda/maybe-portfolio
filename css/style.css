@@ -140,16 +140,16 @@ body {
   font-size: 20px;
   line-height: 110%;
 }
-.about .about__resume .about__resume -item {
+.about .about__resume .about__resume-item {
   display: flex;
   gap: 48px;
 }
-.about .about__resume .about__resume -year {
+.about .about__resume .about__resume-year {
   flex-basis: 110px;
   padding-top: 4px;
 }
-.about .about__resume .about__resume -year,
-.about .about__resume .about__resume -company {
+.about .about__resume .about__resume-year,
+.about .about__resume .about__resume-company {
   font-weight: 600;
   font-size: 20px;
   line-height: 110%;
