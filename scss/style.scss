@@ -36,10 +36,6 @@ body {
   text-transform: lowercase;
   color: $primary;
 }
-.container {
-  max-width: 1920px;
-  padding: 0 128px;
-}
 .header {
   &__inner {
     display: flex;
@@ -100,16 +96,16 @@ body {
     line-height: 110%;
   }
   .about__resume {
-    .about__resume -item {
+    .about__resume-item {
       display: flex;
       gap: 48px;
     }
-    .about__resume -year {
+    .about__resume-year {
       flex-basis: 110px;
       padding-top: 4px;
     }
-    .about__resume -year,
-    .about__resume -company {
+    .about__resume-year,
+    .about__resume-company {
       font-weight: 600;
       font-size: 20px;
       line-height: 110%;

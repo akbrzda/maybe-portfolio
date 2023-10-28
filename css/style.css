@@ -33,6 +33,7 @@ body {
 ol,
 ul {
   list-style: none;
+  padding: 0;
 }
 
 h1,
@@ -74,11 +75,6 @@ body {
   background-color: #F1F1F1;
   text-transform: lowercase;
   color: #000201;
-}
-
-.container {
-  max-width: 1920px;
-  padding: 0 128px;
 }
 
 .header__inner {
@@ -140,16 +136,16 @@ body {
   font-size: 20px;
   line-height: 110%;
 }
-.about .about__resume .about__resume -item {
+.about .about__resume .about__resume-item {
   display: flex;
   gap: 48px;
 }
-.about .about__resume .about__resume -year {
+.about .about__resume .about__resume-year {
   flex-basis: 110px;
   padding-top: 4px;
 }
-.about .about__resume .about__resume -year,
-.about .about__resume .about__resume -company {
+.about .about__resume .about__resume-year,
+.about .about__resume .about__resume-company {
   font-weight: 600;
   font-size: 20px;
   line-height: 110%;
