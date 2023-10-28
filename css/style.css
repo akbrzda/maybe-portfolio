@@ -81,6 +81,12 @@ body {
   padding: 0 128px;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  background: #f1f1f1;
+  z-index: 1;
+}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -101,6 +107,7 @@ body {
   font-size: 20px;
   line-height: 110%;
   position: relative;
+  transition: color 0.3s;
 }
 .menu .menu__link.active {
   color: #333333;
@@ -140,16 +147,16 @@ body {
   font-size: 20px;
   line-height: 110%;
 }
-.about .about__resume .about__resume -item {
+.about .about__resume .about__resume-item {
   display: flex;
   gap: 48px;
 }
-.about .about__resume .about__resume -year {
+.about .about__resume .about__resume-year {
   flex-basis: 110px;
   padding-top: 4px;
 }
-.about .about__resume .about__resume -year,
-.about .about__resume .about__resume -company {
+.about .about__resume .about__resume-year,
+.about .about__resume .about__resume-company {
   font-weight: 600;
   font-size: 20px;
   line-height: 110%;
@@ -252,6 +259,7 @@ body {
   max-width: 400px;
   max-height: 246px;
   border-radius: 16px;
+  animation: fadeEffect 1s;
 }
 .works .works__list-item img {
   width: 100%;
@@ -307,6 +315,7 @@ body {
   padding: 0 32px;
   border-radius: 16px;
   border: 1px solid #33333350;
+  background-color: transparent;
 }
 .contacts .contact-form .form-group textarea {
   width: 100%;
@@ -316,6 +325,7 @@ body {
   resize: none;
   padding: 10px 32px;
   height: 200px;
+  background-color: transparent;
 }
 .contacts .contact-form .form-group:nth-child(3) {
   grid-column-start: 1;
@@ -387,6 +397,23 @@ body {
   color: #959390;
   font-size: 20px;
   line-height: 110%;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
