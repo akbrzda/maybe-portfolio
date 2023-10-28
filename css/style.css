@@ -185,9 +185,7 @@ body {
   padding: 96px 0;
 }
 .skills .skills__list {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-row-gap: 36px;
+  gap: 36px 0;
   margin-top: 50px;
 }
 .skills .skills__item {
@@ -244,10 +242,10 @@ body {
 }
 .works .works__list-item {
   position: relative;
-  width: calc(25% - 15px);
   max-width: 400px;
   max-height: 246px;
   border-radius: 16px;
+  padding: 0;
 }
 .works .works__list-item img {
   width: 100%;
@@ -287,15 +285,18 @@ body {
   padding: 96px 0;
 }
 .contacts .contacts__inner {
-  display: flex;
-  gap: 96px;
+  margin-top: 32px;
+  flex-wrap: wrap;
 }
 .contacts .contact-form {
-  width: 50%;
-  display: grid;
-  grid-template-columns: auto auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 16px 32px;
-  margin-top: 32px;
+}
+.contacts .contact-form .form-group {
+  width: calc(50% - 16px);
 }
 .contacts .contact-form .form-group input {
   width: 100%;
@@ -314,8 +315,7 @@ body {
   height: 200px;
 }
 .contacts .contact-form .form-group:nth-child(3) {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  width: 100%;
 }
 .contacts .contact-form input[type=submit] {
   padding: 10px 48px;
@@ -335,6 +335,9 @@ body {
 }
 .contacts .contact-form *::placeholder {
   color: #33333350;
+}
+.contacts .contacts__list {
+  padding: 0;
 }
 .contacts .contacts__list .contacts__list-item {
   display: flex;
@@ -383,6 +386,12 @@ body {
   color: #959390;
   font-size: 20px;
   line-height: 110%;
+}
+
+@media (min-width: 576px) {
+  .works .works__list-item {
+    width: calc(25% - 15px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
