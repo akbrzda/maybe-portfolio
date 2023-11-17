@@ -244,7 +244,7 @@ body {
   left: 0;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   height: 1px;
   background-color: #000201;
 }
@@ -337,7 +337,6 @@ body {
   border: 1px solid #000201;
   width: 156px;
   text-transform: lowercase;
-  grid-column-start: 2;
   float: right;
   cursor: pointer;
   color: #000201;
@@ -413,6 +412,127 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 64px;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 776px) {
+  .burger-menu {
+    border: none;
+    background: 0 0;
+    position: absolute;
+    right: 12px;
+    top: 21px;
+    z-index: 2;
+    display: block;
+    transition: all 0.3s;
+  }
+  .burger-menu .burger-line {
+    background-color: #000201;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin: 4px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .burger-menu .burger-line:nth-child(2) {
+    width: 25px;
+    margin-right: 0;
+  }
+  .burger-menu .burger-line:nth-child(3) {
+    width: 17px;
+    margin-right: 0;
+  }
+
+  .burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .burger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger-menu.active .burger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    width: 33px;
+  }
+
+  .header .logo img {
+    max-height: 28px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .skills__icon {
+    width: 48px;
+  }
+
+  .menu {
+    position: fixed !important;
+    top: 0 !important;
+    left: -100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: 0.3s;
+  }
+  .menu.active {
+    left: 0;
+    padding: 48px 0 0 32px;
+    background-color: #f8f4f0;
+  }
+  .menu .menu__link {
+    font-size: 24px;
+  }
+
+  .about__info {
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+  .about__info .about__img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about,
+.skills,
+.works,
+.contacts {
+    padding: 96px 0 0 0;
+  }
+
+  .works .works__list-item {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contacts .contacts__inner {
+    flex-wrap: wrap;
+  }
+  .contacts .contact-form {
+    width: 100%;
+  }
+
+  .skills .skills__list {
+    grid-template-columns: auto;
+  }
+
+  .footer .container {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

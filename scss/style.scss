@@ -199,7 +199,7 @@ body {
         left: 0;
         position: absolute;
         width: 100%;
-        z-index: 1;
+        z-index: -1;
         height: 1px;
         background-color: $primary;
       }
@@ -295,7 +295,6 @@ body {
       border: 1px solid $primary;
       width: 156px;
       text-transform: lowercase;
-      grid-column-start: 2;
       float: right;
       cursor: pointer;
       color: $primary;
